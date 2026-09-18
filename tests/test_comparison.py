@@ -36,3 +36,36 @@ def test_get_student_name_with_more_classes():
     result = get_student_with_more_classes(student_1, student_2)
 
     assert result == "Samara"
+
+def test_get_student_names_with_same_no_of_classes():
+    name_1 = NAME_1
+    grade_1 = GRADE_1
+    classes_1 = ["Class1", "Class2", "Class3"]
+    student_1 = Student(name_1, grade_1, classes_1)
+
+    name_2 = NAME_2
+    grade_2 = GRADE_2
+    classes_2 = ["Class1", "Class2", "Class3"]
+    student_2 = Student(name_2, grade_2, classes_2)
+
+    result = get_student_with_more_classes(student_1, student_2)
+
+    assert result == "Samara and Claire"
+
+def test_get_student_names_with_same_no_of_classes_zero():
+    name_1 = NAME_1
+    grade_1 = GRADE_1
+    classes_1 = []
+    student_1 = Student(name_1, grade_1, classes_1)
+
+    name_2 = NAME_2
+    grade_2 = GRADE_2
+    classes_2 = []
+    student_2 = Student(name_2, grade_2, classes_2)
+
+    result = get_student_with_more_classes(student_1, student_2)
+
+    assert result == "Both students do not have classes"
+
+
+

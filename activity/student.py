@@ -7,10 +7,8 @@ class Student:
         self.classes = classes
 
     def add_class(self, new_class):
-        # if not new_class:
-        #     return None
-        classes = self.classes.append(new_class)
-        return classes
+        self.classes.append(new_class)
+        return self.classes
 
     def get_num_classes(self):
         total_class = len(self.classes)
